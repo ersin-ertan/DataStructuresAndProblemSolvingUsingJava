@@ -1,39 +1,43 @@
 package com.nullcognition.datastructuresproblemsolvingusingjava;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity{
 
-   @Override
-   protected void onCreate(Bundle savedInstanceState){
 
-	  super.onCreate(savedInstanceState);
-	  setContentView(R.layout.activity_main);
-   }
+	// The unsigned right shift operator ">>>" shifts a zero into the leftmost position,
+	// while the leftmost position after ">>" depends on sign extension.
 
-   @Override
-   public boolean onCreateOptionsMenu(Menu menu){
-	  // Inflate the menu; this adds items to the action bar if it is present.
-	  getMenuInflater().inflate(R.menu.menu_main, menu);
-	  return true;
-   }
+	@Override
+	protected void onCreate(Bundle savedInstanceState){
 
-   @Override
-   public boolean onOptionsItemSelected(MenuItem item){
-	  // Handle action bar item clicks here. The action bar will
-	  // automatically handle clicks on the Home/Up button, so long
-	  // as you specify a parent activity in AndroidManifest.xml.
-	  int id = item.getItemId();
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		Bitshifting.bitshift(28); // overflow on << 3 and 4
+//		Bitshifting.bitshift(2); // double 0 on 3rd and forth bitshift
+//		Bitshifting.bitshift(4); // 1 to 16
 
-	  //noinspection SimplifiableIfStatement
-	  if(id == R.id.action_settings){
-		 return true;
-	  }
+	}
 
-	  return super.onOptionsItemSelected(item);
-   }
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu){
+		getMenuInflater().inflate(R.menu.menu_main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item){
+		int id = item.getItemId();
+
+		if(id == R.id.action_settings){
+			return true;
+		}
+
+		return super.onOptionsItemSelected(item);
+	}
 }
