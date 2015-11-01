@@ -11,16 +11,23 @@ public class MainActivity extends ActionBarActivity{
 
 
 	// The unsigned right shift operator ">>>" shifts a zero into the leftmost position,
-	// while the leftmost position after ">>" depends on sign extension.
+	// uwhile the leftmost position after ">>" depends on sign extension.
+
+	// arithmetic right shift will padd with the sign bit, which means that
+	// 1 will continue to be added to the lft when shifting to the right
+	// 111 000 000 110 000 ex.shifted three times
+
+	// the number of bits to shift is modded by the size of the source
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Bitshifting.bitshift(28); // overflow on << 3 and 4
+//		Bitshifting.bitshift(28); // overflow on << 3 and 4
 //		Bitshifting.bitshift(2); // double 0 on 3rd and forth bitshift
 //		Bitshifting.bitshift(4); // 1 to 16
+		Bitshifting.bitshiftArithmetic();
 
 	}
 
