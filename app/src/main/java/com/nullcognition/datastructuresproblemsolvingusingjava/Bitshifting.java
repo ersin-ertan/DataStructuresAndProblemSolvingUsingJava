@@ -4,6 +4,8 @@ package com.nullcognition.datastructuresproblemsolvingusingjava;
 
 import android.util.Log;
 
+import hugo.weaving.DebugLog;
+
 //Integer.toString(100,2) // prints 1100100 --binary representation
 public class Bitshifting{
 
@@ -13,6 +15,7 @@ public class Bitshifting{
 	static              String set   = "|1";
 	static              String unset = "|0";
 
+	@DebugLog
 	public static void bitshift(int power){
 		int num = (int) Math.pow(2, power);
 
@@ -35,6 +38,7 @@ public class Bitshifting{
 		}
 	}
 
+	@DebugLog
 	public static void bitshiftArithmetic(){
 		int num = (int) Math.pow(2, 3);
 
@@ -48,12 +52,18 @@ public class Bitshifting{
 		for(int i = 0; i < 5; i++){
 			Log.wtf(T, Integer.toBinaryString(num) + "\t>>>\t" + Integer.toString(i) + "\t=\t" + Integer.toBinaryString(num >>> i));
 		}
-		Log.wtf(T, "V.s.\n"+Integer.toBinaryString(num) + "\t>>\t" + Integer.toString(4) + "\t=\t" + Integer.toBinaryString(num >> 4));
+		Log.wtf(T, "V.s.\n" + Integer.toBinaryString(num) + "\t>>\t" + Integer.toString(4) + "\t=\t" + Integer.toBinaryString(num >> 4));
 
 	}
 
 	// Since JVM 1.2, intermediate computations are not limited to the standard 32 bit and 64 bit precisions. On platforms that can
 	// handle other representations e.g. 80-bit double extended on x86 or x86-64 platforms, those representations can be used, helping to prevent round-off errors and overflows, thereby increasing precision.
 
-	public static strictfp class StrictFloatingPoint{}
+
+	public static strictfp class StrictFloatingPoint{ }
+
+	@DebugLog
+	public static int reverseBit(int i){
+		return Integer.valueOf(new StringBuilder(Integer.toBinaryString(i)).reverse().toString());
+	}
 }

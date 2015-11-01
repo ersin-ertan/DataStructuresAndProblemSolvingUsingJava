@@ -27,7 +27,8 @@ public class MainActivity extends ActionBarActivity{
 //		Bitshifting.bitshift(28); // overflow on << 3 and 4
 //		Bitshifting.bitshift(2); // double 0 on 3rd and forth bitshift
 //		Bitshifting.bitshift(4); // 1 to 16
-		Bitshifting.bitshiftArithmetic();
+//		Bitshifting.bitshiftArithmetic();
+		Log.wtf("Reversal", "" + Bitshifting.reverseBit(0b101001)); // 1000 itterations takes 10ms
 
 	}
 
