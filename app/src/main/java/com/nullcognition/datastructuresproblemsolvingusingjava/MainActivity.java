@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.nullcognition.datastructuresproblemsolvingusingjava.sq_questions.matrix.Solution;
+
 
 public class MainActivity extends ActionBarActivity{
 
@@ -28,7 +30,8 @@ public class MainActivity extends ActionBarActivity{
 //		Bitshifting.bitshift(2); // double 0 on 3rd and forth bitshift
 //		Bitshifting.bitshift(4); // 1 to 16
 //		Bitshifting.bitshiftArithmetic();
-		Log.wtf("Reversal", "" + Bitshifting.reverseBit(0b101001)); // 1000 itterations takes 10ms
+//		Log.wtf("Reversal", "" + Bitshifting.reverseBit(0b101001)); // 1000 itterations takes 10ms
+//		new Solution().print(Solution.test);
 
 	}
 
