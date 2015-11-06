@@ -1,4 +1,4 @@
-package com.nullcognition.datastructuresproblemsolvingusingjava.ch_02_03;
+package com.nullcognition.datastructuresproblemsolvingusingjava.ch_02;
 // ersin 04/11/15 Copyright (c) 2015+ All rights reserved.
 
 
